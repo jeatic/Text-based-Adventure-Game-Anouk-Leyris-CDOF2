@@ -1,55 +1,89 @@
 import time
+from colorama import Fore, Style
+from playsound import playsound
+import sys
 
+def slow_print(text, delay=0.03):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+
+def slow_print(text, delay=0.03):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+        
 def introduction():
-    print("Welcome to the text adventure!")
+    print("\n******************************************")
+    print("           The Forest Adventure           ")
+    print("******************************************\n")
+
+    slow_print("Darkness surrounds you as you step into the mysterious forest.")
     time.sleep(1)
-    print("You find yourself at the beginning of your journey.")
+    slow_print("The moonlight barely pierces through the dense canopy above.")
     time.sleep(1)
-    print("Make choices to determine the outcome of your story.")
+    slow_print("Strange sounds echo through the trees, creating an eerie atmosphere.")
+    time.sleep(1)
+    slow_print("You are about to embark on a journey filled with choices and mysteries.")
+    time.sleep(1)
+    slow_print("In this interactive tale, your decisions will shape your destiny.")
+    time.sleep(1)
+    slow_print("Be mindful, for the forest is not as it seems.")
+    time.sleep(1)
+    slow_print("Your adventure begins now. May your choices be your guide.")
+    time.sleep(1)
+    slow_print("Let The Forest Adventure unfold...\n")
+    time.sleep(1)        
+
 
 def create_question(question, choices):
-    print(question)
+    slow_print(question)
     time.sleep(1)
-    print("Available choices:")
+    slow_print("Available choices:")
     for i, choice in enumerate(choices, start=1):
-        print(f"{i}. {choice}")
+        slow_print("\n"+f"{i}. {choice}")
 
     while True:
         try:
-            choice_num = int(input("Choose a number: "))
+            choice_num = int(input("\nChoose a number: "))
             if 1 <= choice_num <= len(choices):
                 return choice_num
             else:
-                print("Please choose a valid number.")
+                slow_print("Please choose a valid number.")
         except ValueError:
-            print("Please enter a number.")
+            slow_print("Please enter a number.")
 
 def encounter_creature():
-    print("You encounter a mysterious creature in the forest.")
+    slow_print("You encounter a mysterious creature in the forest.")
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
 
 def use_torch():
-    print("The torch illuminates your path.")
+    slow_print("The torch illuminates your path.")
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
 
 def eaten():
-    print("The creature is actually a werewolf. Tonight being a full moon, it attacks and eats you.")
+    slow_print(Fore.RED + "The creature is actually a werewolf. Tonight being a full moon, it attacks and eats you." + Style.RESET_ALL)
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
-    print("End of the adventure.")
+    slow_print("End of the adventure.")
+    playsound("werewolf_howl.mp3")
     exit_game()
 
 def run():
-    print("You flee, but the absence of light makes you miss the root on the ground. You stumble. Slowly, the creature approaches you and eventually devours you.")
+    slow_print(Fore.RED + "You flee, but the absence of light makes you miss the root on the ground. You stumble. Slowly, the creature approaches you and eventually devours you." + Style.RESET_ALL)
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
-    print("End of the adventure.")
+    slow_print("End of the adventure.")
+    playsound("werewolf_howl.mp3")
     exit_game()
 
 def run2():
