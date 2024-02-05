@@ -45,15 +45,14 @@ def create_question(question, choices):
     for i, choice in enumerate(choices, start=1):
         slow_print(f"{i}. {choice}")
 
-    while True:
-        try:
-            choice_num = int(input("Choose a number: "))
-            if 1 <= choice_num <= len(choices):
-                return choice_num
-            else:
-                slow_print("Please choose a valid number.")
-        except ValueError:
-            slow_print("Please enter a number.")
+   try:
+    choice_num = int(input("Choose a number: "))
+    if 1 <= choice_num <= len(choices):
+        return choice_num
+    else:
+        print("Please choose a valid number.")
+    except ValueError:
+    print("Please enter a number.")
 
 def encounter_creature():
     slow_print("You encounter a mysterious creature in the forest.")
