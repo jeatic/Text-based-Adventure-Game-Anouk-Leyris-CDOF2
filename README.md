@@ -5,15 +5,16 @@ A text-based adventure game where the player's decisions define the outcome of t
 ## Getting Started
 
 To get started, clone the repository to your local machine:
-git clone URL_vers_repository_github
+git clone https://github.com/anoukleyris/Text-based-Adventure-Game-Anouk-Leyris-CDOF2.git
 
-# Prerequisites
+# Prerequisites (for those who want help me)
 
-Before making any changes, create a branch with your name where you will implement the proposed modifications in the issues. Title your modified files indicating which issue they address.
+Before making any changes, create a fork and a branch with the issue you resolve where you will modify the code without touching my main branch. 
 
 ## Running the Tests
 
-Launch the code using the "Run" command and start playing!
+Open the code project.py with Visual Studio Code for example
+Launch the code using the "Run" command or in entering "run project.py" in a terminal and start playing!
 
 ### Break Down into End-to-End Tests
 
