@@ -12,17 +12,15 @@ git clone https://github.com/anoukleyris/Text-based-Adventure-Game-Anouk-Leyris-
 Before making any changes, create a fork and a branch with the issue you resolve where you will modify the code without touching my main branch. 
 
 ## Running the Tests
-
+Before running the tests, ensure you have the required libraries installed. You can install them using:
+pip install colorama playsound
+# Add other libraries if needed
 Open the code project.py with Visual Studio Code for example
 Launch the code using the "Run" command or in entering "run project.py" in a terminal and start playing!
 
 ### Break Down into End-to-End Tests
 
 The game will end when the story is complete.
-
-## Built With
-
-[Add the technologies/libraries you used]
 
 **Contributors:**
 - Anouk Leyris - Head of the project
