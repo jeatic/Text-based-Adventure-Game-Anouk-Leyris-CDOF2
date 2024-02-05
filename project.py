@@ -8,12 +8,35 @@ def slow_print(text, delay=0.03):
         time.sleep(delay)
     print()
 
+
+def slow_print(text, delay=0.03):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+        
 def introduction():
-    slow_print("Welcome to the text adventure!")
+    print("\n******************************************")
+    print("           The Forest Adventure           ")
+    print("******************************************\n")
+
+    slow_print("Darkness surrounds you as you step into the mysterious forest.")
     time.sleep(1)
-    slow_print("You find yourself at the beginning of your journey.")
+    slow_print("The moonlight barely pierces through the dense canopy above.")
     time.sleep(1)
-    slow_print("Make choices to determine the outcome of your story.")
+    slow_print("Strange sounds echo through the trees, creating an eerie atmosphere.")
+    time.sleep(1)
+    slow_print("You are about to embark on a journey filled with choices and mysteries.")
+    time.sleep(1)
+    slow_print("In this interactive tale, your decisions will shape your destiny.")
+    time.sleep(1)
+    slow_print("Be mindful, for the forest is not as it seems.")
+    time.sleep(1)
+    slow_print("Your adventure begins now. May your choices be your guide.")
+    time.sleep(1)
+    slow_print("Let The Forest Adventure unfold...\n")
+    time.sleep(1)        
+
 
 def create_question(question, choices):
     slow_print(question)
