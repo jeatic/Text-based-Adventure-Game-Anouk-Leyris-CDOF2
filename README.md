@@ -53,9 +53,9 @@ The story involves making choices that affect the outcome, with different branch
 
 ## Authors
 
-**Anouk Leyris** - Head of the project
-**Jean-Baptiste Martin**
-**Joshua Bornet**
+- **Anouk Leyris** - Head of the project
+- **Jean-Baptiste Martin**
+- **Joshua Bornet**
 
 ## License
 
