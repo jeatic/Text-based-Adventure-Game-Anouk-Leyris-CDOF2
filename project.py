@@ -1,11 +1,17 @@
 import time
 
 def introduction():
-    print("Welcome to the text adventure!")
+    print("Welcome to 'The Forest Adventure'!")
     time.sleep(1)
-    print("You find yourself at the beginning of your journey.")
-    time.sleep(1)
-    print("Make choices to determine the outcome of your story.")
+    print("You find yourself in a mysterious and dark forest, where every rustle of leaves and every shadow hides an unknown danger.")
+    time.sleep(2)
+    print("As the protagonist of this interactive tale, your decisions will shape the outcome of your journey.")
+    time.sleep(2)
+    print("Be cautious, as the forest holds secrets, and not all paths lead to safety. Make wise choices to survive and unveil the mysteries that lie ahead.")
+    time.sleep(2)
+    print("Your adventure begins now. May your decisions guide you through the darkness.")
+    time.sleep(2)
+    print("Let the Forest Adventure commence!")
 
 def create_question(question, choices):
     print(question)
