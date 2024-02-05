@@ -24,6 +24,29 @@ The game will end when the story is complete.
 
 [Add the technologies/libraries you used]
 
+## main steps : 
+Function Definitions:
+
+introduction(): Prints a welcome message and sets the stage for the text adventure.
+create_question(question, choices): Prints a question and a list of choices, takes user input, and validates the choice.
+encounter_creature(): Describes encountering a mysterious creature in the forest.
+use_torch(): Describes using a torch to illuminate the path.
+eaten(), run(), run2(), left(), right(), turn_back(), surprise(), win(): Different scenarios and outcomes of the story.
+exit_game(): Prints a thank-you message and exits the game.
+forest_adventure() Function:
+
+Asks the player to make a choice between exploring the forest further or lighting a torch.
+If the player chooses to explore, more choices and scenarios unfold, leading to different outcomes based on subsequent choices.
+main() Function:
+
+Calls introduction() to set up the story.
+Calls forest_adventure() to start the main part of the text adventure.
+if __name__ == "__main__": Block:
+
+Checks if the script is being run directly and not imported as a module.
+Calls the main() function to start the execution of the text adventure.
+The story involves making choices that affect the outcome, with different branches leading to various possible endings. The code uses time.sleep() to introduce delays in the text for a better storytelling experience.
+
 **Contributors:**
 - Anouk Leyris - Head of the project
 - [Add your name if you made modifications]
@@ -31,6 +54,7 @@ The game will end when the story is complete.
 ## Authors
 
 **Anouk Leyris** - Head of the project
+Jean-Baptiste Martin - Part of the readMe redaction 
 
 ## License
 
