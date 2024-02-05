@@ -1,6 +1,7 @@
 import time
 from colorama import Fore, Style
 from playsound import playsound
+import sys
 
 def slow_print(text, delay=0.03):
     for char in text:
@@ -43,11 +44,11 @@ def create_question(question, choices):
     time.sleep(1)
     slow_print("Available choices:")
     for i, choice in enumerate(choices, start=1):
-        slow_print(f"{i}. {choice}")
+        slow_print("\n"+f"{i}. {choice}")
 
     while True:
         try:
-            choice_num = int(input("Choose a number: "))
+            choice_num = int(input("\nChoose a number: "))
             if 1 <= choice_num <= len(choices):
                 return choice_num
             else:
@@ -73,7 +74,7 @@ def eaten():
     slow_print("...")
     time.sleep(2)
     slow_print("End of the adventure.")
-    playsound("werewolf_howl.mp3")  # Ajoutez un fichier audio approprié
+    playsound("werewolf_howl.mp3")
     exit_game()
 
 def run():
@@ -82,7 +83,7 @@ def run():
     slow_print("...")
     time.sleep(2)
     slow_print("End of the adventure.")
-    playsound("monster_roar.mp3")  # Ajoutez un fichier audio approprié
+    playsound("werewolf_howl.mp3")
     exit_game()
 
 def run2():
