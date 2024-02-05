@@ -1,18 +1,26 @@
 import time
+from colorama import Fore, Style
+from playsound import playsound
+
+def slow_print(text, delay=0.03):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
 
 def introduction():
-    print("Welcome to the text adventure!")
+    slow_print("Welcome to the text adventure!")
     time.sleep(1)
-    print("You find yourself at the beginning of your journey.")
+    slow_print("You find yourself at the beginning of your journey.")
     time.sleep(1)
-    print("Make choices to determine the outcome of your story.")
+    slow_print("Make choices to determine the outcome of your story.")
 
 def create_question(question, choices):
-    print(question)
+    slow_print(question)
     time.sleep(1)
-    print("Available choices:")
+    slow_print("Available choices:")
     for i, choice in enumerate(choices, start=1):
-        print(f"{i}. {choice}")
+        slow_print(f"{i}. {choice}")
 
     while True:
         try:
@@ -20,36 +28,38 @@ def create_question(question, choices):
             if 1 <= choice_num <= len(choices):
                 return choice_num
             else:
-                print("Please choose a valid number.")
+                slow_print("Please choose a valid number.")
         except ValueError:
-            print("Please enter a number.")
+            slow_print("Please enter a number.")
 
 def encounter_creature():
-    print("You encounter a mysterious creature in the forest.")
+    slow_print("You encounter a mysterious creature in the forest.")
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
 
 def use_torch():
-    print("The torch illuminates your path.")
+    slow_print("The torch illuminates your path.")
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
 
 def eaten():
-    print("The creature is actually a werewolf. Tonight being a full moon, it attacks and eats you.")
+    slow_print(Fore.RED + "The creature is actually a werewolf. Tonight being a full moon, it attacks and eats you." + Style.RESET_ALL)
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
-    print("End of the adventure.")
+    slow_print("End of the adventure.")
+    playsound("werewolf_howl.mp3")  # Ajoutez un fichier audio approprié
     exit_game()
 
 def run():
-    print("You flee, but the absence of light makes you miss the root on the ground. You stumble. Slowly, the creature approaches you and eventually devours you.")
+    slow_print(Fore.RED + "You flee, but the absence of light makes you miss the root on the ground. You stumble. Slowly, the creature approaches you and eventually devours you." + Style.RESET_ALL)
     time.sleep(1)
-    print("...")
+    slow_print("...")
     time.sleep(2)
-    print("End of the adventure.")
+    slow_print("End of the adventure.")
+    playsound("monster_roar.mp3")  # Ajoutez un fichier audio approprié
     exit_game()
 
 def run2():
